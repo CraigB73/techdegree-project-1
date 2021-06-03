@@ -1,0 +1,29 @@
+body{
+  background-color: black;
+}
+#container{
+  background-color: light rgb(202, 228, 202);
+  border: 5px solid rgb(172, 203, 233);
+  height: 275px;
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+#btn{
+  margin: 50px auto;
+  height: 40px;
+  width: 250px;
+  font-size: 22px;
+  background-color: rgb(101, 77, 77);
+}
+
+#output{
+  margin: 50px auto;
+  height: 50px;
+  width: 250px;
+  border:2px solid aliceblue;
+  font-size: px;
+  color: aliceblue;
+
+}
