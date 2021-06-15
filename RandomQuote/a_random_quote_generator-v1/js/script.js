@@ -16,23 +16,36 @@ let quotes = [
     source: 'Will Rogers',
     citation: 'BrainTracy.com',
     year: 'unknown',
+
   },
   {
     quote: 'Simplicity is the ultimate sophistication',
     source: 'Leonardo da Vinci',
-    citation: 'Quote Investigor.com',
+    citation: 'unknown',
     year: 2015,
+  },
+  {
+    quote: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
+    source: 'Martin Fowler',
+    citation: 'goodreads.com',
+    year: 2021,
+  },
+  {
+    quote: 'Everyone should know how to program a computer, because it teaches you how to think!',
+    source: 'Steve Jobs',
+    citation: 'iinspirationalquotess.com',
+    year: 'unknown',
   }
 
 ];
 
 /***
  * Random quote function 
- * assigns random number 0 - 2 to the quotes array index
+ * assigns random number bewteen 0 - 2 to the quotes array index
  * placed in a new variable 
  * return new array to function
  ***/
-function randomQuote() {
+function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length);
   let quotesArray = quotes[randomNumber];
   // console.log(quotesArray);
@@ -49,18 +62,17 @@ function randomQuote() {
  * return the html variable to the funcition to be used in the .addEventListener()
  */
 function printQuote() {
-  let getRandomQuote = randomQuote();
+  let randomQuote = getRandomQuote();
   let html = `
-  <p class= "quote">${getRandomQuote.quote}</p>
-  <p class= "source">${getRandomQuote.source}`;
+  <p class= "quote">${randomQuote.quote}</p>
+  <p class= "source">${randomQuote.source}`;
 
-  if (getRandomQuote.citation !== 'unknown') {
-    html += `<span class= "citation">${getRandomQuote.citation}</span>`
+  if (randomQuote.citation !== 'unknown') {
+    html += `<span class= "citation">${randomQuote.citation}</span>`
 
   };
-  if (getRandomQuote.year !== 'unknown') {
-    html += `<span class= "year">${getRandomQuote.year}</span></p>`;
-
+  if (randomQuote.year !== 'unknown') {
+    html += `<span class= "year">${randomQuote.year}</span></p>`;
   };
   document.getElementById('quote-box').innerHTML = html;
   return (html)
