@@ -61,11 +61,13 @@ function getRandomQuote() {
  * insert string to so it can be printed to the page.  
  * return the html variable to the funcition to be used in the .addEventListener()
  */
+
 function printQuote() {
   let randomQuote = getRandomQuote();
+
   let html = `
-  <p class= "quote">${randomQuote.quote}</p>
-  <p class= "source">${randomQuote.source}`;
+    <p class= "quote" > ${randomQuote.quote}</p >
+      <p class="source">${randomQuote.source}`;
 
   if (randomQuote.citation !== 'unknown') {
     html += `<span class= "citation">${randomQuote.citation}</span>`
@@ -75,6 +77,7 @@ function printQuote() {
     html += `<span class= "year">${randomQuote.year}</span></p>`;
   };
   document.getElementById('quote-box').innerHTML = html;
+
   return (html)
 }
 
