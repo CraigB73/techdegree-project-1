@@ -47,9 +47,9 @@ let quotes = [
  ***/
 function getRandomQuote() {
   let randomNumber = Math.floor(Math.random() * quotes.length);
-  let quotesArray = quotes[randomNumber];
+  let oneRandomQuote = quotes[randomNumber];
   // console.log(quotesArray);
-  return quotesArray;
+  return oneRandomQuote;
 
 }
 
